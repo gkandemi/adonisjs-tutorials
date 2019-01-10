@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{ style('https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS') }}
+    <title>Adonis 4.0 Blog</title>
+</head>
+<body>
+    @include('inc/navbar')
+    <div class="container">
+        @!section('content')
+    </div>
+    {{ script('https://code.jquery.com/jquery-3.3.1.slim.min.js') }}
+    {{ script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js') }}
+    {{ script('https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js') }}
+</body>
+</html>

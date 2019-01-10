@@ -1,0 +1,21 @@
+@layout('main')
+@section('content')
+    <a href="/posts">Go Back</a>
+    <h1>Add Post</h1>
+    <form action="/posts" method="POST">
+        {{ csrfField() }}
+        <div class="form-group">
+            <label for="">Title</label>
+            <input type="text" class="form-control" name="title" value="{{ old('title', '') }}">
+            {{ elIf('<span class="text-danger">$self</span>', getErrorFor('title'), hasErrorFor('title')) }}
+
+        </div>
+        <div class="form-group">
+            <label for="">Body</label>
+            <textarea type="text" class="form-control" name="body">{{ old('body', '') }}</textarea>
+            {{ elIf('<span class="text-danger">$self</span>', getErrorFor('body'), hasErrorFor('body')) }}
+
+        </div>
+        <button type="submit" class="btn btn-success">Kaydet</button>
+    </form>
+@endsection
